@@ -24,5 +24,10 @@ table {
 }
 
 #edit {
-    color: rgb(0, 183, 255);
+    color: rgb(255, 217, 0);
+}
+
+#delete {
+    color: rgb(255, 0, 0);
+    padding-left: 1rem;
 }
