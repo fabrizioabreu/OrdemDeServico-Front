@@ -23,9 +23,20 @@ export class ClienteService {
     return this.http.get<Cliente[]>(url);
   }
 
+  findById(id : any):Observable<Cliente> {
+    const url = this.baseUrl + "/clientes/" + id;
+    return this.http.get<Cliente>(url);
+  }
+
   create(cliente: Cliente):Observable<Cliente> {
     const url = this.baseUrl + "/clientes";
     return this.http.post<Cliente>(url, cliente);
+  }
+
+  update(cliente: Cliente):Observable<Cliente> {
+    const url = this.baseUrl + "/clientes/" + cliente.id;
+    // const url = `${this.baseUrl}/techicos${cliente.id}`;    Podemos fazer destas 2 formas
+    return this.http.put<Cliente>(url, cliente);
   }
 
 
